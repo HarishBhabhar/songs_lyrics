@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Philosopher&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    background: black;
+    color: white;
+}
+
+header {
+    background: linear-gradient(to right, #0371bfd1, #972acfd9), url(../Images/bg1.jfif);
+    height: 57vh;
+    width: 100vw;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form {
+    font-size: 20px;
+    width: 56%;
+    text-align: center;
+    position: relative;
+}
+
+#searchbar {
+    padding: 0.4rem 1rem;
+    min-width: 100%;
+    border-radius: 2rem;
+    outline: none;
+}
+
+button {
+    background-color: #2d77be;
+    padding: 0.4rem 2rem;
+    border-radius: 2rem;
+    outline: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    color: white;
+}
+
+button:hover {
+    transform: scale(0.96);
+}
+
+.result {
+    color: white;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.songs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.songs-list li {
+    margin-bottom: 2rem;
+    width: 684px;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.songs-list li::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    bottom: -4px;
+    height: 3px;
+    background: #2d77be;
+    display: inline-block;
+}
+
+.songs-list li div {
+    float: left;
+}
+
+.songs-list li span {
+    float: right;
+    background-color: palevioletred;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px 10px;
+    text-transform: capitalize;
+}
+
+.songs-list li span:hover {
+    transform: scale(0.96);
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 800px) {
+    #form {
+        width: 96%;
+        font-size: 16px;
+    }
+
+
+    #searchbar {
+        min-width: 96%;
+    }
+
+    button {
+        position: unset;
+        margin-top: 1rem;
+        background-color: #112651;
+    }
+
+    .songs-list li {
+        width: 74vw;
+    }
+
+    .songs-list li div {
+        float: unset;
+    }
+
+    .songs-list li span {
+        float: unset;
+    }
+}
